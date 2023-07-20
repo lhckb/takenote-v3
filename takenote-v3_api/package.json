@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "a note taking app at its finest",
   "scripts": {
-    "start": "npx tsc && node dist/app.js",
+    "start": "npx ts-node-esm src/app.ts",
     "dev": "npx tsc && nodemon dist/app.js --watch src -e ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext js,ts, src"

@@ -27,7 +27,7 @@ services:
       - app-connect
     command: bash -c "npm run dev"
     volumes:
-      - ./takenote-v3_api/src:/takenote/src
+      - /takenote/src:/mnt/c/Users/Luís/Documents/coding/takenote-v3/takenote-v3_api/src/
 networks:
   app-connect:
     driver: bridge

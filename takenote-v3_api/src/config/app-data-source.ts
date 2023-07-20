@@ -2,11 +2,11 @@ import { DataSource } from "typeorm";
 
 const database = new DataSource({
   type: "postgres",
-  host: "takenote-v3_db",
+  host: "localhost",
   port: 5432,
   username: "postgres",
   password: "postgres",
-  database: "postgres",
+  database: "takenote",
   entities: ["src/models/*.ts"],
   migrations: ["src/migrations/*.ts"]
 });

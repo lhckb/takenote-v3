@@ -1,6 +1,6 @@
 import { Length } from "class-validator";
-import { Entity, OneToOne, PrimaryGeneratedColumn, Column } from "typeorm";
-import User from "./user";
+import { Entity, OneToOne, PrimaryGeneratedColumn, Column, Timestamp } from "typeorm";
+import User from "./person";
 
 @Entity()
 export default class Note {
@@ -11,6 +11,16 @@ export default class Note {
   user: User;
 
   @Column({ nullable: false })
-  @Length(1, 600)
-  text: string;
+  @Length(1, 50)
+  title: string;
+
+  @Column({ nullable: false })
+  @Length(1, 1000)
+  body: string;
+
+  @Column({ nullable: false })
+  created_at: Timestamp;
+
+  @Column({ nullable: false })
+  updated_at: Timestamp;
 }
